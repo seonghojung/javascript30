@@ -8,6 +8,14 @@
 .exercise__row a {
   text-decoration: none;
 }
+.card-section {
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out;
+}
+.card-section:hover {
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out;
+}
 .card-section__img {
   background-repeat: no-repeat;
   background-size: cover;
