@@ -1,0 +1,47 @@
+.main__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.exercise__row {
+  margin-bottom: 20px;
+}
+.exercise__row a {
+  text-decoration: none;
+}
+.card-section__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 150px;
+}
+.exercise__row:first-child .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small0.jpg");
+}
+.exercise__row:nth-child(2) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small1.jpg");
+}
+.exercise__row:nth-child(3) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small2.jpg");
+}
+.exercise__row:nth-child(4) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small3.jpg");
+}
+.exercise__row:nth-child(5) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small4.jpg");
+}
+.exercise__row:nth-child(6) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small5.jpg");
+}
+.exercise__row:nth-child(7) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small6.jpg");
+}
+.exercise__row:nth-child(8) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small7.jpg");
+}
+.exercise__row:nth-child(9) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small8.jpg");
+}
+.exercise__row:nth-child(10) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small9.jpg");
+}
