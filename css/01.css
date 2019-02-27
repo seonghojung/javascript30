@@ -1,5 +1,5 @@
 html {
-  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/01/background_img.jpg");
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/01/background_img.jpg);
   background-size: cover;
 }
 body,
