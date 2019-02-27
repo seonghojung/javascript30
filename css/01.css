@@ -1,3 +1,50 @@
-p {
-  color: blue;
+html {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/01/background_img.jpg");
+  background-size: cover;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.keys__container {
+  width: 70%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.keys {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 20px;
+}
+.key {
+  border: 5px solid black;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px;
+  text-shadow: 0 0 0.5rem black;
+  transition: all 0.07s ease;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+kbd {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.sound {
+  color: #ffc600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
