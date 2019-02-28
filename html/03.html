@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/03.css" />
+    <link
+      rel="icon"
+      href="https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/favicon-JS30.png"
+      type="image/png"
+    />
+    <title>03. Playing with CSS Variables and JS</title>
+  </head>
+
+  <body>
+    <h2>Update CSS Variables with <span class="hl">JS</span></h2>
+
+    <div class="controls">
+      <label for="spacing">Spacing:</label>
+      <input
+        type="range"
+        id="spacing"
+        name="spacing"
+        min="10"
+        max="100"
+        value="0"
+        data-sizing="px"
+      />
+
+      <label for="blur">Blur:</label>
+      <input
+        type="range"
+        id="blur"
+        name="blur"
+        min="0"
+        max="25"
+        value="0"
+        data-sizing="px"
+      />
+      <br />
+      <label for="borderRadius">Border-Radius:</label>
+      <input
+        type="range"
+        id="borderRadius"
+        name="borderRadius"
+        min="0"
+        max="50"
+        value="0"
+        data-sizing="%"
+      />
+
+      <label for="baseColor">Base Color:</label>
+      <input type="color" id="baseColor" name="baseColor" value="#ffc600" />
+    </div>
+
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" />
+
+    <script>
+      const inputs = document.querySelectorAll(".controls input");
+
+      function handleChange() {
+        const unit = this.dataset.sizing || "";
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + unit
+        );
+      }
+
+      inputs.forEach(input => input.addEventListener("change", handleChange));
+      inputs.forEach(input =>
+        input.addEventListener("mousemove", handleChange)
+      );
+    </script>
+  </body>
+</html>
