@@ -1,26 +1,80 @@
 body {
-  width: 90%;
+  width: 97%;
   margin: auto;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/background_img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    width: 80%;
+  }
 }
 
 .nav-bar {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
   margin: 20px auto;
-}
-.nav-bar div {
-  width: 100%;
 }
 .main__title {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 600;
+  background-color: white;
+  width: auto;
+  margin: auto;
+  margin-bottom: 30px;
+  display: flex;
+  padding: 5px 10px;
+}
+.sub__title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.github__link {
+  text-align: left;
+  margin-right: auto;
+  background-color: #262626;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.github__link a {
+  text-decoration: none;
+  color: white;
 }
 .author__title {
   text-align: right;
-  font-size: 20px;
+  margin-left: auto;
+  background-color: #262626;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  .sub__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  .github__link {
+    text-align: center;
+    margin: auto;
+    background-color: #262626;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+  .author__title {
+    text-align: center;
+    margin: auto;
+    background-color: #262626;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
 }
 .exercise__row {
   margin-bottom: 20px;
@@ -31,10 +85,12 @@ body {
 .card-section {
   transform: scale(1);
   transition: transform 0.1s ease-in-out;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
 }
 .card-section:hover {
   transform: scale(1.1);
   transition: transform 0.1s ease-in-out;
+  box-shadow: 0 0 40px 40px rgba(0, 0, 0, 0.05);
 }
 .card-section__img {
   background-repeat: no-repeat;
@@ -72,4 +128,14 @@ body {
 }
 .exercise__row:nth-child(10) .card-section__img {
   background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small9.jpg");
+}
+
+.card-section__title {
+  font-size: 1rem;
+  background-color: white;
+  padding: 10px;
+  height: 100px;
+  color: #262626;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
 }
