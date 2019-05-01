@@ -6,6 +6,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-size: 10px;
+  font-family: "Titillium Web", sans-serif;
 }
 
 @media screen and (min-width: 1400px) {
@@ -129,13 +130,44 @@ body {
 .exercise__row:nth-child(10) .card-section__img {
   background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small9.jpg");
 }
+.exercise__row:nth-child(11) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small10.jpg");
+}
+.exercise__row:nth-child(12) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small11.jpg");
+}
+.exercise__row:nth-child(13) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small12.jpg");
+}
+.exercise__row:nth-child(14) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small13.jpg");
+}
+.exercise__row:nth-child(15) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small14.jpg");
+}
+.exercise__row:nth-child(16) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small15.jpg");
+}
+.exercise__row:nth-child(17) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small16.jpg");
+}
+.exercise__row:nth-child(18) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small17.jpg");
+}
+.exercise__row:nth-child(19) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small18.jpg");
+}
+.exercise__row:nth-child(20) .card-section__img {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/small19.jpg");
+}
 
 .card-section__title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: white;
   padding: 10px;
   height: 100px;
   color: #262626;
   font-weight: 600;
   letter-spacing: 0.05rem;
+  text-transform: uppercase;
 }
