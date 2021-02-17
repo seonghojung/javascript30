@@ -10,6 +10,9 @@ img {
   filter: blur(var(--blur));
   border-radius: var(--borderRadius);
   background-color: var(--baseColor);
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hl {

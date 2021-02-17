@@ -16,29 +16,23 @@ body {
   min-height: 100vh;
   align-items: center;
 }
-
 .clock {
   min-width: 20rem;
   height: 20rem;
-  border: 1px solid black;
   border-radius: 50%;
-  margin: 50px auto;
-  position: relative;
+  margin: 0 auto;
   padding: 1rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.65);
   background: black;
 }
 
 .outer-clock-face {
-  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 100%;
+  border-radius: 50%;
   background: #fefefc;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
+  position: relative;
 }
-
 .outer-clock-face::after {
   transform: rotate(90deg);
 }
@@ -54,7 +48,6 @@ body {
   z-index: 0;
   left: 49%;
 }
-
 .outer-clock-face .marking {
   background: black;
   width: 3px;
@@ -113,7 +106,6 @@ body {
   transform: rotate(90deg);
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
-
 .hand.hour-hand {
   width: 30%;
   z-index: 3;
