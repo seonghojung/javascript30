@@ -4,21 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Titillium+Web"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      href="https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/favicon-JS30.png"
-      type="image/png"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+    <link rel="icon" href="https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/favicon-JS30.png" type="image/png" />
     <title>05. Flex Panels Image Gallery</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Amatic+SC"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/05.css" />
   </head>
 
@@ -55,21 +44,22 @@
       const panels = document.querySelectorAll(".panel");
 
       function toggleOpen() {
-        console.log("Hello");
         this.classList.toggle("open");
       }
 
       function toggleActive(e) {
-        console.log(e.propertyName);
         if (e.propertyName.includes("flex")) {
           this.classList.toggle("open-active");
         }
       }
 
-      panels.forEach(panel => panel.addEventListener("click", toggleOpen));
-      panels.forEach(panel =>
-        panel.addEventListener("transitionend", toggleActive)
-      );
+      panels.forEach(function (panel) {
+        panel.addEventListener("click", toggleOpen);
+      });
+
+      panels.forEach(function (panel) {
+        panel.addEventListener("transitionend", toggleActive);
+      });
     </script>
   </body>
 </html>
