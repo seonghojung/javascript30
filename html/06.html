@@ -2,12 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+    <title>06. AJAX Type Ahead 👀</title>
     <link rel="stylesheet" href="../css/06.css" />
-    <link rel="icon" href="https://s3.ap-northeast-2.amazonaws.com/bongbong/javascript30/images/favicon-JS30.png" type="image/png" />
-    <title>06. Ajax Type Ahead 👀</title>
   </head>
 
   <body>
@@ -18,43 +14,42 @@
         <li>or a state</li>
       </ul>
     </form>
-
     <script>
       const endpoint = "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
 
       const cities = [];
       fetch(endpoint)
-        .then(tomato => tomato.json())
-        .then(data => cities.push(...data));
+        .then((res) => res.json())
+        .then((data) => cities.push(...data));
 
-      const findMatches = wordToMatch => {
-        return cities.filter(place => {
-          const regex = new RegExp(wordToMatch, "gi");
-          return place.city.match(regex) || place.state.match(regex);
+      function addComma(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      function findMatches(word, cities) {
+        return cities.filter((place) => {
+          const regex = new RegExp(word, "gi");
+          return place.city.match(regex);
         });
-      };
+      }
 
-      const formatNumber = num => {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-      };
-
-      const displayMatches = () => {
-        matchArray = findMatches(searchInput.value);
-        const html = matchArray
-          .map(place => {
-            const regex = new RegExp(searchInput.value, "gi");
-            const cityName = place.city.replace(regex, `<span class="hl">${searchInput.value}</span>`);
-            const stateName = place.state.replace(regex, `<span class="hl">${searchInput.value}</span>`);
+      function displayMatches() {
+        const matchArr = findMatches(this.value, cities);
+        const html = matchArr
+          .map((place) => {
+            const regex = new RegExp(this.value, "gi");
+            const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+            const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
             return `
-          <li>
-            <span class="name">${cityName}, ${stateName}</span>
-            <span class="population">${formatNumber(place.population)}</span>
-          </li>
+            <li>
+              <span class="name">${cityName}, ${stateName}</span>
+              <span class="population">${addComma(place.population)}</span>
+            </li>
           `;
           })
           .join("");
         suggestions.innerHTML = html;
-      };
+      }
 
       const searchInput = document.querySelector(".search");
       const suggestions = document.querySelector(".suggestions");
